@@ -1,38 +1,28 @@
-<!DOCTYPE html><html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>HTML5 Face Detection</title>
-<link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-<div class="wrapper">
-	<!-- Our Main Video Element -->
-	<video height="426" width="640" controls autoplay style="width:100px; height:75px;"></video>
-	<a href="#" onclick="App.start('glasses');">Glasses!</a>
-	<br>
-	<!-- Out Canvas Element for output -->
-	<canvas id="output"  height="426" width="515" ></canvas>
+<!DOCTYPE html>
+<html>
 
-	<div class="colours" style="display:none;">
-		<div id="red">
-			<input type="range" min=0 max=255 value=190 class="min">
-			<input type="range" min=0 max=255 value=240 class="max">
-		</div>
-		<div id="green">
-			<input type="range" min=0 max=255 value=0 class="min">
-			<input type="range" min=0 max=255 value=120 class="max">
-		</div>
-		<div id="blue">
-			<input type="range" min=0 max=255 value=90 class="min">
-			<input type="range" min=0 max=255 value=190 class="max">
-		</div>				
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="./css/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="./js/libs/face.js"></script>
+	<script src="./js/libs/ccv.js"></script>
+	<script src="./js/libs/jquery.facedetection.js"></script>
+	<title>JavaScriptで顔認証をするサンプルデモ</title>
+</head>
+
+<body>
+	<h1>face detect</h1>
+	<div id="detectWrapper">
+		<video id="video" autoplay width="640" height="480"></video>
+		<img id="img" width="640" height="480" />
+		<div id="detectResult"></div>
 	</div>
 
-</div>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/ccv.js"></script>
-<script type="text/javascript" src="scripts/face.js"></script>
-<script type="text/javascript" src="scripts/scripts.js"></script>
-<script type="text/javascript" src="scripts/stackblur.js"></script>
+	<h2>取得したデータの値</h2>
+	<textarea rows="8" id="face-data"></textarea>
+	<script src="./js/script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+#img {
+  display: none;
+}
+#detectWrapper {
+  position: relative;
+  width: 640px;
+  height: 480px;
+}
+#video, #detectResult {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+}
+#detectResult div {
+  position: absolute;
+  border: solid 4px #D36015;
+}
+textarea {
+  width: 95%;
+  height: 200px;
+}
